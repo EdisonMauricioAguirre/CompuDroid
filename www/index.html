@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="xhr.js"></script>
+    <script src="xdk/init-dev.js"></script>
+    <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+    <script type="application/javascript" src="marginal/marginal-position.js"></script>
+    <script type="application/javascript" src="js/index_init_services.js"></script>
+    <script type="application/javascript" src="js/index_user_scripts.js"></script>
+    <script type="application/javascript" src="xdk/ad/ionic_subpage.js"></script>
+    <script type="application/javascript" src="js/index_uib_w_16_actionsheet.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+
+    <div class="upage" id="mainpage">
+
+      <!--Empieza Subpagina Home Tab Icono Home de Footer -->
+      <div class="upage-outer content-area vertical-col left fixed-header-footer">
+        <!--Empieza Pagina Inicial Arranque -->
+        <div id="home" class="upage-content vertical-col" animation="slide-left-right-ios7">
+
+          <div class="grid grid-pad urow uib_row_10 row-height-10" data-uib="layout/row" data-ver="0">
+            <div class="col uib_col_11 col-0_12-12" data-uib="layout/col" data-ver="0">
+              <div class="widget-container content-area vertical-col">
+                <div class="widget uib_w_16 d-margins" data-uib="media/text" data-ver="0">
+                  <div class="widget-container left-receptacle"></div>
+                  <div class="widget-container right-receptacle"></div>
+                  <div>
+
+                    <figure class="figure-align">
+                      <img src="gallery_images/frgc-comfamiliar-risaralda.png">
+
+                      <figcaption data-position="bottom"></figcaption>
+                    </figure>
+
+                    <div class="list card">
+
+                      <a class="item item-icon-left bsoftware">
+                        <i class="icon ion-code-working"></i>
+                        Software
+                      </a>
+
+                      <a class="item item-icon-left bhardware">
+                        <i class="icon ion-monitor"></i>
+                        Hardware
+                      </a>
+
+                      <a class="item item-icon-left bherramientas">
+                        <i class="icon ion-wifi"></i>
+                        Herramientas
+                      </a>
+
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <span class="uib_shim"></span>
+          </div>
+        </div>
+
+        <div class="list">
+
+          <!--Empieza Pagina Categoria hardware -->
+
+          <div id="hardware" class="upage-content hidden wrapping-col left">
+            <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+              <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+                <div class="widget-container content-area vertical-col">
+                  <div class="widget uib_w_7 d-margins" data-uib="media/text" data-ver="0">
+                    <div class="widget-container left-receptacle"></div>
+
+                    <div>
+
+                      <div class="list">
+
+                        <a class="item item-avatar lsockets">
+                          <img src="gallery_images/cpu.png">
+                          <h2>Sockets</h2>
+                          <p>Listado Principales</p>
+                        </a>
+                        <a class="item item-avatar aputa">
+                          <img src="gallery_images/usb.png">
+                          <h2>Puertos</h2>
+                          <p>Conectores y Perifericos</p>
+                        </a>
+                        <a class="item item-avatar bflash">
+                          <img src="gallery_images/ram_icon.jpg">
+                          <h2>Puertos de Expancion</h2>
+                        </a>
+
+                        <a class="item item-avatar bpaneltrasero">
+                          <img src="gallery_images/my_computer.png">
+                          <h2>Panel Trasero</h2>
+
+                        </a>
+
+                        <a class="item item-avatar bpanelfrontal">
+                          <img src="gallery_images/virtual-pc-1.png">
+                          <h2>Panel Frontal</h2>
+
+                        </a>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <span class="uib_shim"></span>
+          </div>
+        </div>
+
+        <div id="sockets" class="upage-content hidden wrapping-col left">
+          <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+            <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+              <div class="widget-container content-area vertical-col">
+                <div class="widget uib_w_7 d-margins" data-uib="media/text" data-ver="0">
+                  <div class="widget-container left-receptacle"></div>
+
+                  <div>
+
+                    <div class="list">
+
+                      <a class="item item-avatar lsamd">
+                        <img src="gallery_images/AMD-logo-2013.gif">
+                        <h2>Sockets AMD</h2>
+
+                      </a>
+                      <a class="item item-avatar lsintel">
+                        <img src="gallery_images/intel-logo-vector-01-200x200.png">
+                        <h2>Sockets INTEL</h2>
+
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="uib_shim"></span>
+        </div>
+
+        <div id="PanelTrasero" class="upage-content hidden wrapping-col left">
+          <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+            <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+              <div class="widget-container content-area vertical-col">
+                <div class="widget uib_w_7 d-margins" data-uib="media/text" data-ver="0">
+                  <div class="widget-container left-receptacle"></div>
+
+                  <div>
+
+                    <div class="list card">
+
+                      <div class="item item-avatar">
+                        <img src="mcfly.jpg">
+                        <h2>Panel Trasero</h2>
+                        <p>Exterior Board</p>
+                      </div>
+
+                      <div class="item item-body">
+                        <img class="full-image" src="gallery_images/trasero.jpg">
+                        <p>
+                        </p>
+                        <p></p>
+                        <p>1 Puerto de mouse PS/2 (verde).</p>
+                        <p>2 Puerto paralelo. Este puerto de 25 pines conecta una impresora, un escáner u otros dispositivos paralelos.
+                        </p>
+                        <p></p>
+                        <h2>1 Puerto de mouse PS/2 (verde)</h2>
+                        <p>Este puerto es para un mouse PS/2.</p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+
+                        <p></p>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="uib_shim"></span>
+        </div>
+
+        <div id="PanelFrontal" class="upage-content hidden wrapping-col left">
+          <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+            <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+              <div class="widget-container content-area vertical-col">
+                <div class="widget uib_w_7 d-margins" data-uib="media/text" data-ver="0">
+                  <div class="widget-container left-receptacle"></div>
+
+                  <div>
+
+                    <div class="list card">
+
+                      <div class="item item-avatar">
+                        <img src="gallery_images/panel_frontal.jpg">
+                        <h2>Panel Frontal</h2>
+                        <p>Interno En Main Board</p>
+                      </div>
+
+                      <div class="item item-body">
+
+                        <p>
+                          El panel frontal de la placa base o el front panel es un conjunto de pines que tienen como finalidad encender el ordenador, encender las luces frontales del case, hacer funcionar el botón de reset y en algunas placas hacer funcionar el parlante interno
+                          del computador. Para poder hacer funcionar todo esto el case / carcasa dispone de una serie de (jumper) cables que van conectados de una forma específica en la placa base, dichos cables son como los siguientes:
+                        </p>
+                        <img class="full-image" src="gallery_images/panel_frontal.jpg">
+
+                        <p>
+                        </p>
+                        <p>POWER: Para encendido del equipo.</p>
+                        <p>RESET: Para reiniciar el equipo.</p>
+                        <p>HDD LED: Es el indicador de que esta funcionando correctamente el disco duro.</p>
+                        <p>POWER LED: Es el indicador de que el equipo esta encendido</p>
+                        Para poder conectar los cables de los pines correctos es necesario saber la configuración del panel de la tarjeta madre, ya que ya que en el mercado hay diferentes marcas y cada marca tiene su configuración, la mejor manera es tener el manual de la placa
+                        en el cual se va a trabajar. Ejemplo:
+
+                        <p></p>
+
+                        <img class="full-image" src="gallery_images/led_22.JPEG">
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <span class="uib_shim"></span>
+      </div>
+
+      <div id="samd" class="upage-content hidden wrapping-col left">
+        <div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
+            <div class="widget-container content-area vertical-col">
+              <div class="widget uib_w_8 scale-image d-margins" data-uib="media/img" data-ver="0">
+                <figure class="figure-align">
+                  <img src="gallery_images/amd-logo-1024x214.png">
+
+                  <figcaption data-position="bottom"></figcaption>
+                </figure>
+
+                <div class="card">
+                  <div class="item item-text-wrap">
+                    AMD es el segundo proveedor de microprocesadores basados en la arquitectura x86 y también uno de los más grandes fabricantes de unidades de procesamiento gráfico. También posee un 8,6% de Spansion
+                  </div>
+                </div>
+
+                <div class="list">
+
+                  <div class="item bsoftware">
+                    Socket 462
+                  </div>
+
+                  <a class="item bsoftware">
+    Socket 754
+  </a>
+                  <div class="item bsoftware">
+                    Socket 939
+                  </div>
+
+                  <a class="item bsoftware">
+   Socket 940
+  </a>
+                  <div class="item bsoftware">
+                    Socket AM2
+                  </div>
+
+                  <div class="item bsoftware">
+                    Socket AM3
+                  </div>
+
+                  <div class="item bsoftware">
+                    Socket AM3+
+                  </div>
+
+                  <a class="item" href="home">
+    Socket F 1207FX
+  </a>
+
+                </div>
+                <span class="uib_shim"></span>
+              </div>
+            </div>
+            <span class="uib_shim"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="sinte1" class="upage-content hidden wrapping-col left">
+        <div class="grid grid-pad urow uib_row_4 row-height-4" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_4 col-0_12-12" data-uib="layout/col" data-ver="0">
+            <div class="widget-container content-area vertical-col">
+              <div class="widget uib_w_9 scale-image d-margins" data-uib="media/img" data-ver="0">
+                <figure class="figure-align">
+                  <img src="gallery_images/intel.jpg">
+                  <figcaption data-position="bottom"></figcaption>
+                </figure>
+                <div class="card">
+                  <div class="item item-text-wrap">
+                    Intel Corporation es el mayor fabricante de circuitos integrados del mundo, según su cifra de negocio anual.La compañía estadounidense es la creadora de la serie de procesadores x86, los procesadores más comúnmente encontrados en la mayoría de las computadoras
+                    personales.
+                  </div>
+                </div>
+
+                <div class="list">
+
+                  <div class="item 370">
+                    Socket 370
+                  </div>
+
+                  <a class="item 423">
+    Socket 423
+  </a>
+                  <div class="item 478">
+                    Socket 478
+                  </div>
+
+                  <a class="item 775">
+   Socket 775
+  </a>
+                  <div class="item 1150">
+                    Socket 1150
+                  </div>
+
+                  <div class="item 1155">
+                    Socket 1155
+                  </div>
+
+                  <div class="item 1156">
+                    Socket 1156
+                  </div>
+
+                  <a class="item 1366">
+    Socket 1366
+  </a>
+
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+          <span class="uib_shim"></span>
+        </div>
+      </div>
+
+      <div id="software" class="upage-content hidden wrapping-col left">
+
+        <div class="grid grid-pad urow uib_row_12 row-height-12" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_13 col-0_12-12" data-uib="layout/col" data-ver="0">
+            <div class="widget-container content-area vertical-col">
+              <div class="widget uib_w_17 d-margins" data-uib="media/text" data-ver="0">
+                <div class="widget-container left-receptacle"></div>
+                <div class="widget-container right-receptacle"></div>
+                <div>
+                  <div class="list">
+
+                    <a class="item item-avatar bflash">
+                      <img src="gallery_images/flash%20player.png">
+                      <h2>Maconfig / Drivers</h2>
+                      <p>DriverCloud / Gratuito.</p>
+                    </a>
+                    <a class="item item-avatar bflash">
+                      <img src="gallery_images/flash%20player.png">
+                      <h2>Baidu Antivirus</h2>
+                      <p>Gratuito.</p>
+                    </a>
+
+                    <a class="item item-avatar bflash">
+                      <img src="gallery_images/flash%20player.png">
+                      <h2>Suite Office/ Ofimatica</h2>
+                      <p>Microsoft / Pago.</p>
+                    </a>
+
+                    <a class="item item-avatar bflash">
+                      <img src="gallery_images/flash%20player.png">
+                      <h2>DriverPack / Audio - Video</h2>
+                      <p>Complementos / Gratuito.</p>
+                    </a>
+
+                    <a class="item item-avatar bflash">
+                      <img src="gallery_images/flash%20player.png">
+                      <h2>Firefox</h2>
+                      <p>Mozilla / Gratuito.</p>
+                    </a>
+
+                    <a class="item item-avatar bflash">
+                      <img src="gallery_images/flash%20player.png">
+                      <h2>Google Chrome</h2>
+                      <p>google / Gratuito.</p>
+                    </a>
+
+                    <a class="item item-avatar bflash">
+                      <img src="gallery_images/flash%20player.png">
+                      <h2>Java</h2>
+                      <p>Oracle / Gratuito.</p>
+                    </a>
+
+                    <a class="item item-avatar bflash">
+                      <img src="gallery_images/flash%20player.png">
+                      <h2>cclenaer / Limpieza </h2>
+                      <p>piriform / Gratuito.</p>
+                    </a>
+
+                    <a class="item item-avatar bflash">
+                      <img src="gallery_images/flash%20player.png">
+                      <h2>Flash Player</h2>
+                      <p>Adobe / Gratuito.</p>
+                    </a>
+
+                    <a class="item item-avatar bflash">
+                      <img src="gallery_images/flash%20player.png">
+                      <h2>Adobe pdf</h2>
+                      <p>Adobe / Gratuito.</p>
+                    </a>
+
+                    <a class="item item-avatar bflash">
+                      <img src="gallery_images/flash%20player.png">
+                      <h2>Flash Player</h2>
+                      <p>Adobe / Gratuito.</p>
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+          <span class="uib_shim"></span>
+        </div>
+      </div>
+
+      <div id="s370" class="upage-content hidden wrapping-col left">
+        <div class="grid grid-pad urow uib_row_5 row-height-5" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_5 col-0_12-12" data-uib="layout/col" data-ver="0">
+            <div class="widget-container content-area vertical-col">
+              <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0">
+                <div class="widget-container left-receptacle"></div>
+                <div class="widget-container right-receptacle"></div>
+                <div>
+                  <div class="list card">
+
+                    <div class="item item-avatar">
+                      <img src="gallery_images/intel-logo-vector-01-200x200.png">
+                      <h2>Socket intel 370</h2>
+                      <p>Fabricado en 1999</p>
+                    </div>
+
+                    <div class="item item-body">
+                      <img class="full-image" src="gallery_images/Intel_Socket_370.JPG">
+                      <p>
+                        El zócalo 370 fue utilizado originalmente para los procesadores Intel Celeron, pero se convirtió más adelante en plataforma para los procesadores Intel Pentium III con núcleos Coppermine y Tualatin, así como para los procesadores Cyrix III de Via-Cyrix,
+                        posteriormente renombrados VIA C3. Algunas placas base que utilizaron el zócalo 370, soportaron procesadores Intel en configuraciones duales; otros permitieron el uso de un procesador en zócalo 370 o en ranura Slot 1, en forma
+                        excluyente.
+                      </p>
+
+                      <button class="button button-block button-positive">
+                        ESPECIFICACIONES
+                      </button>
+
+                      <p>
+                      </p>
+                      <div class="row">
+                        <div class="col col-50">Tipo</div>
+                        <div class="col col-50">PGA-ZIF</div>
+                      </div>
+                      <div class="row">
+                        <div class="col col-50">Factor de forma del chip</div>
+                        <div class="col col-50">PPlastic pin grid array (PPGA)</div>
+                      </div>
+                      <div class="row">
+                        <div class="col col-50">Contactos</div>
+                        <div class="col col-50">370</div>
+                      </div>
+                      <div class="row">
+                        <div class="col col-50">Frecuencia del FSB</div>
+                        <div class="col col-50">66, 100 y 133 MHz</div>
+                      </div>
+                      <div class="row">
+                        <div class="col col-50">Tensión</div>
+                        <div class="col col-50">1.05–2.1 V</div>
+                      </div>
+                      <div class="row">
+                        <div class="col col-50">Dimensiones del procesador</div>
+                        <div class="col col-50">1.95 × 1.95 pul</div>
+                      </div>
+                      <p></p>
+
+                      <button class="button button-block button-positive">
+                        PROCESADORES
+                      </button>
+
+                      <p>
+                      </p>
+                      <div class="row">
+                        <div class="col col-50">Intel Celeron</div>
+                        <div class="col col-50">(PPGA, 300–533 MHz)</div>
+                      </div>
+                      <div class="row">
+                        <div class="col col-50">Intel Celeron</div>
+                        <div class="col col-50">Coppermine - FC-PGA, 533–1100 MHz</div>
+                      </div>
+                      <div class="row">
+                        <div class="col col-50">Intel Celeron</div>
+                        <div class="col col-50">Tualatin FC-PGA2, 900–1400 MHz</div>
+                      </div>
+                      <div class="row">
+                        <div class="col col-50">Intel Pentium III</div>
+                        <div class="col col-50">Coppermine FC-PGA, 500–1133 MHZ</div>
+                      </div>
+                      <div class="row">
+                        <div class="col col-50">Intel Pentium III</div>
+                        <div class="col col-50">Tualatin FC-PGA2, 1000–1400 MHz</div>
+                      </div>
+                      <div class="row">
+                        <div class="col col-50">VIA Cyrix III/C3</div>
+                        <div class="col col-50">500–1200 MHz</div>
+                      </div>
+                      <p></p>
+
+                      <p>
+                        <a href="#" class="subdued">1 Like</a>
+                        <a href="#" class="subdued">5 Comments</a>
+                      </p>
+                    </div>
+
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                      <a class="tab-item" href="#">
+                        <i class="icon ion-thumbsup"></i>
+                        Like
+                      </a>
+                      <a class="tab-item" href="#">
+                        <i class="icon ion-chatbox"></i>
+                        Comment
+                      </a>
+                      <a class="tab-item" href="#">
+                        <i class="icon ion-share"></i>
+                        Share
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+          <span class="uib_shim"></span>
+        </div>
+      </div>
+      <div id="puertos" class="upage-content hidden wrapping-col left">
+        <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+            <div class="widget-container content-area vertical-col">
+              <div class="widget uib_w_7 d-margins" data-uib="media/text" data-ver="0">
+                <div class="widget-container left-receptacle"></div>
+
+                <div>
+
+                  <div class="list">
+
+                    <a class="item item-avatar psub">
+                      <img src="gallery_images/usb.png">
+                      <h2>Puerto Usb</h2>
+
+                    </a>
+                    <a class="item item-avatar pserie">
+                      <img src="gallery_images/icon-serial-monitor.png">
+                      <h2>Puerto Serie</h2>
+
+                    </a>
+
+                    <a class="item item-avatar pparelelo">
+                      <img src="gallery_images/paralelo.gif">
+                      <h2>Puerto Paralelo</h2>
+
+                    </a>
+
+                    <a class="item item-avatar pethernet">
+                      <img src="gallery_images/ethernet.png">
+                      <h2>Puerto Ethernet</h2>
+
+                    </a>
+
+                    <a class="item item-avatar pjack">
+                      <img src="gallery_images/Ethernet%20Rj45.ico">
+                      <h2>Puerto Jack</h2>
+
+                    </a>
+
+                    <a class="item item-avatar psdcart">
+                      <img src="gallery_images/images.png">
+                      <h2>Conector Sdcard</h2>
+
+                    </a>
+
+                    <a class="item item-avatar pdvi">
+                      <img src="gallery_images/DVI.gif">
+                      <h2>Conector DVI</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lhdmi">
+                      <img src="gallery_images/39479512.jpg">
+                      <h2>Conector Hdmi</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lvga">
+                      <img src="gallery_images/vga.png">
+                      <h2>Conector Vga</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lsvideo">
+                      <img src="gallery_images/Jack_icon_S-Video.png">
+                      <h2>Conector SVideo</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lvesa">
+                      <img src="gallery_images/icon_vesa.jpg">
+                      <h2>Conector Vesa</h2>
+
+                    </a>
+
+                    <a class="item item-avatar ljack">
+                      <img src="gallery_images/ethernet.png">
+                      <h2>Conector Jack</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lfirewire">
+                      <img src="gallery_images/firewire.jpg">
+                      <h2>Conector Firewire</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lrca">
+                      <img src="gallery_images/rca.png">
+                      <h2>Conector Rca</h2>
+
+                    </a>
+
+                    <a class="item item-avatar ldin">
+                      <img src="gallery_images/din.jpg">
+                      <h2>Conector Audio Din</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lxlr">
+                      <img src="gallery_images/09-XLR.jpg">
+                      <h2>Conector XLR - Dmx</h2>
+
+                    </a>
+
+                    <a class="item item-avatar latx">
+                      <img src="gallery_images/atx.png">
+                      <h2>Conector Fuente Atx</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lmolex">
+                      <img src="gallery_images/d.jpg">
+                      <h2>Conector Pc Molex</h2>
+
+                    </a>
+
+                    <a class="item item-avatar ldd">
+                      <img src="gallery_images/esata3.jgp">
+                      <h2>Conector Eide - Ata - Sata</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lps2">
+                      <img src="gallery_images/ps2.jpg">
+                      <h2>Conector ps2 at</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lfiber">
+                      <img src="gallery_images/fiber.png">
+                      <h2>Conector colores fibra</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lmidi">
+                      <img src="gallery_images/midi.jpg">
+                      <h2>Conector Midi</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lapplepi">
+                      <img src="gallery_images/apple.png">
+                      <h2>Conector Dock 30 pi Apple</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lpple2">
+                      <img src="gallery_images/apple.png">
+                      <h2>Conector Apple lightning</h2>
+
+                    </a>
+
+                    <a class="item item-avatar lpdi">
+                      <img src="gallery_images/intel-logo-vector-01-200x200.png">
+                      <h2>Conector Pdi</h2>
+
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="psub" class="upage-content hidden wrapping-col left">
+        <div class="grid grid-pad urow uib_row_7 row-height-7" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_8 col-0_12-12" data-uib="layout/col" data-ver="0">
+            <div class="widget-container content-area vertical-col">
+              <div class="widget uib_w_11 scale-image d-margins" data-uib="media/img" data-ver="0">
+                <figure class="figure-align">
+                  <img src="gallery_images/pusb.png">
+                  <figcaption data-position="bottom"></figcaption>
+                </figure>
+              </div>
+              <div class="widget uib_w_12 d-margins" data-uib="media/text" data-ver="0">
+                <div class="widget-container left-receptacle"></div>
+                <div class="widget-container right-receptacle"></div>
+                <div>
+                  <p>Conectores tipo A (izquierda) y B (derecha) vistos desde la parte posterior (cable) a la frontal (conector).</p>
+                  <p>&nbsp;</p>
+                  <p>Pin 1 VCC (+5 V)</p>
+                  <p>Pin 2 Data-</p>
+                  <p>Pin 3 Data+</p>
+                  <p>Pin 4 Masa</p>
+
+                </div>
+
+                <table border="1" style="width:100%">
+                  <tbody>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+          <span class="uib_shim"></span>
+        </div>
+      </div>
+      <div id="pserie" class="upage-content hidden wrapping-col left">
+        <div class="grid grid-pad urow uib_row_13 row-height-13" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_14 col-0_12-12" data-uib="layout/col" data-ver="0">
+            <div class="widget-container content-area vertical-col">
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+          <span class="uib_shim"></span>
+        </div>
+      </div>
+      <div id="pparelelo" class="upage-content hidden wrapping-col left"></div>
+      <div id="pethernet" class="upage-content hidden wrapping-col left"></div>
+      <div id="pjack" class="upage-content hidden wrapping-col left"></div>
+      <div id="psdcart" class="upage-content hidden wrapping-col left"></div>
+      <div id="pdvi" class="upage-content hidden wrapping-col left"></div>
+      <div id="lhdmi" class="upage-content hidden wrapping-col left"></div>
+      <div id="lchequeo1" class="upage-content hidden wrapping-col left" animation="slide-left-right-ios7">
+                  <div class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_9 col-0_12-12" data-uib="layout/col" data-ver="0">
+            <div class="widget-container content-area vertical-col">
+              <div class="widget uib_w_13 d-margins" data-uib="media/text" data-ver="0">
+                <div class="widget-container left-receptacle"></div>
+                <div class="widget-container right-receptacle"></div>
+
+                <ul class="list">
+
+                  <ul class="list">
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Desernegenizar Equipo
+                    </li>
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Extraer Baterias
+                    </li>
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Usar Manilla Antiestatica
+                    </li>
+
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Usar proteccion personal
+                    </li>
+
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Uso adecuado de espacio de trabajo
+                    </li>
+
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Documentar el Proceso
+                    </li>
+
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Orden en uso de Herramienta
+                    </li>
+
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      UOrden en partes y accesorios
+                    </li>
+
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Desensambla los elementos
+                    </li>
+
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Limpia adecuadamente las partes
+                    </li>
+
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Cambio de crema termica en procesador
+                    </li>
+
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Usar Manilla Antiestatica
+                    </li>
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Limpia la memoria RAM
+                    </li>
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Manipula adecuada de disco duro
+                    </li>
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Usar Manilla Antiestatica
+                    </li>
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Usa pinceles o brochas para extraer el polvo
+                    </li>
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Usa adecuadamente el Blower
+                    </li>
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Usa liquido limpiador electronico
+                    </li>
+                    <li class="item item-checkbox">
+                      <label class="checkbox">
+                        <input type="checkbox" checked="">
+                      </label>
+                      Usa lubricante para los extractores de calor
+                    </li>
+
+                  </ul>
+
+                </ul>
+              </div>
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+          <span class="uib_shim"></span>
+        </div>
+      </div>
+
+      <div id="herramientas" class="upage-content hidden wrapping-col left">
+        <div class="grid grid-pad urow uib_row_6 row-height-6" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_6 col-0_12-12" data-uib="layout/col" data-ver="0">
+            <div class="widget-container content-area vertical-col">
+              <div class="grid grid-pad urow uib_row_9 row-height-9" data-uib="layout/row" data-ver="0">
+                <div class="col uib_col_10 col-1_12-12" data-uib="layout/col" data-ver="0">
+                  <div class="widget-container content-area vertical-col">
+                    <div class="widget uib_w_14 d-margins" data-uib="media/text" data-ver="0">
+                      <div class="widget-container left-receptacle"></div>
+                      <div class="widget-container right-receptacle"></div>
+                      <div class="list">
+
+                        <a class="item item-avatar lchequeo1">
+                          <img src="gallery_images/checklist_icon.png">
+                          <h2>Lista de Chequeo</h2>
+
+                        </a>
+                        <a class="item item-avatar lascii">
+                          <img src="gallery_images/ascii_icon.jpg">
+                          <h2>Codigo Ascii</h2>
+
+                        </a>
+
+                      </div>
+                    </div>
+
+                    <span class="uib_shim"></span>
+                  </div>
+                </div>
+                <span class="uib_shim"></span>
+              </div>
+
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+          <span class="uib_shim"></span>
+        </div>
+      </div>
+
+      <div id="Ascii" class="upage-content hidden wrapping-col left">
+        <div class="grid grid-pad urow uib_row_6 row-height-6" data-uib="layout/row" data-ver="0">
+          <div class="col uib_col_6 col-0_12-12" data-uib="layout/col" data-ver="0">
+            <div class="widget-container content-area vertical-col">
+              <div class="grid grid-pad urow uib_row_9 row-height-9" data-uib="layout/row" data-ver="0">
+                <div class="col uib_col_10 col-1_12-12" data-uib="layout/col" data-ver="0">
+                  <div class="widget-container content-area vertical-col">
+                    <div class="widget uib_w_14 d-margins" data-uib="media/text" data-ver="0">
+                      <div class="widget-container left-receptacle"></div>
+                      <div class="widget-container right-receptacle"></div>
+
+                      <div class="list">
+
+                        <div class="item item-divider">
+                          No Imprimibles
+                        </div>
+
+                        <a class="item">	Alt + 02 = STX 	<p>	(  Inicio de texto )		</p> 	</a>
+                        <a class="item">	Alt + 03 = ETX 	<p>	(  Fin de texto, palo corazon barajas inglesas de poker )		</p> 	</a>
+                        <a class="item">	Alt + 04 = EOT 	<p>	(  Fin de transmisión, palo diamantes barajas de poker )		</p> 	</a>
+                        <a class="item">	Alt + 05 = ENQ 	<p>	(  Consulta, palo treboles barajas inglesas de poker )		</p> 	</a>
+                        <a class="item">	Alt + 06 = ACK 	<p>	(  Reconocimiento, palo picas cartas de poker )		</p> 	</a>
+                        <a class="item">	Alt + 07 = BEL 	<p>	(  Timbre )		</p> 	</a>
+                        <a class="item">	Alt + 08 = BS 	<p>	(  Retroceso )		</p> 	</a>
+                        <a class="item">	Alt + 09 = HT 	<p>	(  Tabulador horizontal )		</p> 	</a>
+                        <a class="item">	Alt + 10 = LF 	<p>	(  Nueva línea - salto de línea )		</p> 	</a>
+                        <a class="item">	Alt + 11 = VT 	<p>	(  Tabulador vertical )		</p> 	</a>
+                        <a class="item">	Alt + 12 = FF 	<p>	(  Nueva página - salto de página )		</p> 	</a>
+                        <a class="item">	Alt + 13 = CR 	<p>	(  ENTER - retorno de carro )		</p> 	</a>
+                        <a class="item">	Alt + 14 = SO 	<p>	(  Desplazamiento hacia afuera )		</p> 	</a>
+                        <a class="item">	Alt + 15 = SI 	<p>	(  Desplazamiento hacia adentro )		</p> 	</a>
+                        <a class="item">	Alt + 16 = DLE 	<p>	(  Escape de vínculo de datos )		</p> 	</a>
+                        <a class="item">	Alt + 17 = DC1 	<p>	(  Control dispositivo 1 )		</p> 	</a>
+                        <a class="item">	Alt + 18 = DC2 	<p>	(  Control dispositivo 2 )		</p> 	</a>
+                        <a class="item">	Alt + 19 = DC3 	<p>	(  Control dispositivo 3 )		</p> 	</a>
+                        <a class="item">	Alt + 20 = DC4 	<p>	(  Control dispositivo 4 )		</p> 	</a>
+                        <a class="item">	Alt + 21 = NAK 	<p>	(  Confirmación negativa )		</p> 	</a>
+                        <a class="item">	Alt + 22 = SYN 	<p>	(  Inactividad síncronica )		</p> 	</a>
+                        <a class="item">	Alt + 23 = ETB 	<p>	(  Fin del bloque de transmisión )		</p> 	</a>
+                        <a class="item">	Alt + 24 = CAN 	<p>	(  Cancelar )		</p> 	</a>
+                        <a class="item">	Alt + 25 = EM 	<p>	(  Fin del medio )		</p> 	</a>
+                        <a class="item">	Alt + 26 = SUB 	<p>	(  Sustitución )		</p> 	</a>
+                        <a class="item">	Alt + 27 = ESC 	<p>	(  Esc - escape )		</p> 	</a>
+                        <a class="item">	Alt + 28 = FS 	<p>	(  Separador de archivos )		</p> 	</a>
+                        <a class="item">	Alt + 29 = GS 	<p>	(  Separador de grupos )		</p> 	</a>
+                        <a class="item">	Alt + 30 = RS 	<p>	(  Separador de registros )		</p> 	</a>
+                        <a class="item">	Alt + 31 = US 	<p>	(  Separador de unidades )		</p> 	</a>
+
+                        <div class="item item-divider">
+                          Alfanumericos Imprimibles
+                        </div>
+
+                        <a class="item">	Alt + 32 = espacio 	<p>	(  Espacio en blanco )		</p> 	</a>
+                        <a class="item">	Alt + 33 = ! 	<p>	(  Signos de exclamacion, signo de admiracion )		</p> 	</a>
+                        <a class="item">	Alt + 34 = " 	<p>	(  Comillas dobles , comillas altas o inglesas )		</p> 	</a>
+                        <a class="item">	Alt + 35 = # 	<p>	(  Signo numeral o almohadilla )		</p> 	</a>
+                        <a class="item">	Alt + 36 = $ 	<p>	(  Signo pesos )		</p> 	</a>
+                        <a class="item">	Alt + 37 = % 	<p>	(  Signo de porcentaje - por ciento )		</p> 	</a>
+                        <a class="item">	Alt + 38 = &amp; 	<p>	(  Y - ampersand - et latina )		</p> 	</a>
+                        <a class="item">	Alt + 39 = ' 	<p>	(  Comillas simples, apóstrofe )		</p> 	</a>
+                        <a class="item">	Alt + 40 = 	<p>	(  		</p> 	</a>
+                        <a class="item">	Alt + 41 = ) 	<p>	(  Cierra paréntesis )		</p> 	</a>
+                        <a class="item">	Alt + 42 = * 	<p>	(  Asterisco )		</p> 	</a>
+                        <a class="item">	Alt + 43 = + 	<p>	(  Signo mas, suma, positivo )		</p> 	</a>
+                        <a class="item">	Alt + 44 = , 	<p>	(  Coma )		</p> 	</a>
+                        <a class="item">	Alt + 45 = - 	<p>	(  Signo menos , resta , negativo , guión medio )		</p> 	</a>
+                        <a class="item">	Alt + 46 = . 	<p>	(  Punto )		</p> 	</a>
+                        <a class="item">	Alt + 47 = / 	<p>	(  Barra inclinada, división, operador cociente )		</p> 	</a>
+                        <a class="item">	Alt + 48 = 0 	<p>	(  Número cero )		</p> 	</a>
+                        <a class="item">	Alt + 49 = 1 	<p>	(  Número uno )		</p> 	</a>
+                        <a class="item">	Alt + 50 = 2 	<p>	(  Número dos )		</p> 	</a>
+                        <a class="item">	Alt + 51 = 3 	<p>	(  Número tres )		</p> 	</a>
+                        <a class="item">	Alt + 52 = 4 	<p>	(  Número cuatro )		</p> 	</a>
+                        <a class="item">	Alt + 53 = 5 	<p>	(  Número cinco )		</p> 	</a>
+                        <a class="item">	Alt + 54 = 6 	<p>	(  Número seis )		</p> 	</a>
+                        <a class="item">	Alt + 55 = 7 	<p>	(  Número siete )		</p> 	</a>
+                        <a class="item">	Alt + 56 = 8 	<p>	(  Número ocho )		</p> 	</a>
+                        <a class="item">	Alt + 57 = 9 	<p>	(  Número nueve )		</p> 	</a>
+                        <a class="item">	Alt + 58 = : 	<p>	(  Dos puntos )		</p> 	</a>
+                        <a class="item">	Alt + 59 = ; 	<p>	(  Punto y coma )		</p> 	</a>
+                        <a class="item">	Alt + 60 = &lt; 	<p>	(  Menor que )		</p> 	</a>
+                        <a class="item">	Alt + 61 = = 	<p>	(  Signo igual, igualdad, igual que )		</p> 	</a>
+                        <a class="item">	Alt + 62 = &gt; 	<p>	(  Mayor que )		</p> 	</a>
+                        <a class="item">	Alt + 63 = ? 	<p>	(  Cierra signo interrogación )		</p> 	</a>
+                        <a class="item">	Alt + 64 = @ 	<p>	(  Arroba )		</p> 	</a>
+                        <a class="item">	Alt + 65 = A 	<p>	(  Letra A mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 66 = B 	<p>	(  Letra B mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 67 = C 	<p>	(  Letra C mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 68 = D 	<p>	(  Letra D mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 69 = E 	<p>	(  Letra E mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 70 = F 	<p>	(  Letra F mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 71 = G 	<p>	(  Letra G mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 72 = H 	<p>	(  Letra H mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 73 = I 	<p>	(  Letra I mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 74 = J 	<p>	(  Letra J mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 75 = K 	<p>	(  Letra K mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 76 = L 	<p>	(  Letra L mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 77 = M 	<p>	(  Letra M mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 78 = N 	<p>	(  Letra N mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 79 = O 	<p>	(  Letra O mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 80 = P 	<p>	(  Letra P mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 81 = Q 	<p>	(  Letra Q mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 82 = R 	<p>	(  Letra R mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 83 = S 	<p>	(  Letra S mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 84 = T 	<p>	(  Letra T mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 85 = U 	<p>	(  Letra U mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 86 = V 	<p>	(  Letra V mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 87 = W 	<p>	(  Letra W mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 88 = X 	<p>	(  Letra X mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 89 = Y 	<p>	(  Letra Y mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 90 = Z 	<p>	(  Letra Z mayúscula )		</p> 	</a>
+                        <a class="item">	Alt + 91 = [ 	<p>	(  Abre corchetes )		</p> 	</a>
+                        <a class="item">	Alt + 92 = \ 	<p>	(  Barra invertida , contrabarra , barra inversa )		</p> 	</a>
+                        <a class="item">	Alt + 93 = ] 	<p>	(  Cierra corchetes )		</p> 	</a>
+                        <a class="item">	Alt + 94 = ^ 	<p>	(  Intercalación - acento circunflejo )		</p> 	</a>
+                        <a class="item">	Alt + 95 = _ 	<p>	(  Guión bajo , subrayado , subguión )		</p> 	</a>
+                        <a class="item">	Alt + 96 = ` 	<p>	(  Acento grave )		</p> 	</a>
+                        <a class="item">	Alt + 97 = a 	<p>	(  Letra a minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 98 = b 	<p>	(  Letra b minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 99 = c 	<p>	(  Letra c minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 100 = d 	<p>	(  Letra d minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 101 = e 	<p>	(  Letra e minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 102 = f 	<p>	(  Letra f minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 103 = g 	<p>	(  Letra g minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 104 = h 	<p>	(  Letra h minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 105 = i 	<p>	(  Letra i minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 106 = j 	<p>	(  Letra j minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 107 = k 	<p>	(  Letra k minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 108 = l 	<p>	(  Letra l minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 109 = m 	<p>	(  Letra m minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 110 = n 	<p>	(  Letra n minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 111 = o 	<p>	(  Letra o minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 112 = p 	<p>	(  Letra p minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 113 = q 	<p>	(  Letra q minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 114 = r 	<p>	(  Letra r minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 115 = s 	<p>	(  Letra s minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 116 = t 	<p>	(  Letra t minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 117 = u 	<p>	(  Letra u minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 118 = v 	<p>	(  Letra v minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 119 = w 	<p>	(  Letra w minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 120 = x 	<p>	(  Letra x minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 121 = y 	<p>	(  Letra y minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 122 = z 	<p>	(  Letra z minúscula )		</p> 	</a>
+                        <a class="item">	Alt + 123 = { 	<p>	(  Abre llave curva - llaves curvas )		</p> 	</a>
+                        <a class="item">	Alt + 124 = | 	<p>	(  Barra vertical, pleca , linea vertical )		</p> 	</a>
+                        <a class="item">	Alt + 125 = } 	<p>	(  Cierra llave - llaves curvas )		</p> 	</a>
+                        <a class="item">	Alt + 126 = ~ 	<p>	(  Signo de equivalencia , tilde o virgulilla de la ñ )		</p> 	</a>
+
+                        <div class="item item-divider">
+                          Extendidos Imprimibles
+                        </div>
+
+                        <a class="item">	Alt + 128 = Ç 	<p>	(	 Letra C cedilla mayúscula ) 		</p> 	</a>
+                        <a class="item">	Alt + 129 = ü 	<p>	(	 Letra u minúscula con diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 130 = é 	<p>	(	 Letra e minúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 131 = â 	<p>	(	 Letra a minúscula con acento circunflejo ) 		</p> 	</a>
+                        <a class="item">	Alt + 132 = ä 	<p>	(	 Letra a minúscula con diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 133 = à 	<p>	(	 Letra a minúscula con acento grave ) 		</p> 	</a>
+                        <a class="item">	Alt + 134 = å 	<p>	(	 Letra a minúscula con anillo ) 		</p> 	</a>
+                        <a class="item">	Alt + 135 = ç 	<p>	(	 Letra c cedilla minúscula ) 		</p> 	</a>
+                        <a class="item">	Alt + 136 = ê 	<p>	(	 Letra e minúscula con acento circunflejo ) 		</p> 	</a>
+                        <a class="item">	Alt + 137 = ë 	<p>	(	 Letra e minúscula con diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 138 = è 	<p>	(	 Letra e minúscula con acento grave ) 		</p> 	</a>
+                        <a class="item">	Alt + 139 = ï 	<p>	(	 Letra i minúscula con diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 140 = î 	<p>	(	 Letra i minúscula con acento circunflejo ) 		</p> 	</a>
+                        <a class="item">	Alt + 141 = ì 	<p>	(	 Letra i minúscula con acento grave ) 		</p> 	</a>
+                        <a class="item">	Alt + 142 = Ä 	<p>	(	 Letra A mayúscula con diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 143 = Å 	<p>	(	 Letra A mayúscula con anillo ) 		</p> 	</a>
+                        <a class="item">	Alt + 144 = É 	<p>	(	 Letra E mayúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 145 = æ 	<p>	(	 Diptongo latino ae minúscula ) 		</p> 	</a>
+                        <a class="item">	Alt + 146 = Æ 	<p>	(	 Diptongo latino AE mayúscula ) 		</p> 	</a>
+                        <a class="item">	Alt + 147 = ô 	<p>	(	 Letra o minúscula con acento circunflejo ) 		</p> 	</a>
+                        <a class="item">	Alt + 148 = ö 	<p>	(	 Letra o minúscula con diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 149 = ò 	<p>	(	 Letra o minúscula con acento grave ) 		</p> 	</a>
+                        <a class="item">	Alt + 150 = û 	<p>	(	 Letra u minúscula con acento circunflejo ) 		</p> 	</a>
+                        <a class="item">	Alt + 151 = ù 	<p>	(	 Letra u minúscula con acento grave ) 		</p> 	</a>
+                        <a class="item">	Alt + 152 = ÿ 	<p>	(	 Letra y minúscula con diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 153 = Ö 	<p>	(	 Letra O mayúscula con diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 154 = Ü 	<p>	(	 Letra U mayúscula con diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 155 = ø 	<p>	(	 Letra o minúscula con barra inclinada ) 		</p> 	</a>
+                        <a class="item">	Alt + 156 = £ 	<p>	(	 Signo Libra Esterlina ) 		</p> 	</a>
+                        <a class="item">	Alt + 157 = Ø 	<p>	(	 Letra O mayúscula con barra inclinada ) 		</p> 	</a>
+                        <a class="item">	Alt + 158 = × 	<p>	(	 Signo de multiplicación ) 		</p> 	</a>
+                        <a class="item">	Alt + 159 = ƒ 	<p>	(	 Símbolo de función, florín neerlandés ) 		</p> 	</a>
+                        <a class="item">	Alt + 160 = á 	<p>	(	 Letra a minúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 161 = í 	<p>	(	 Letra i minúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 162 = ó 	<p>	(	 Letra o minúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 163 = ú 	<p>	(	 Letra u minúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 164 = ñ 	<p>	(	 Letra eñe minúscula - letra n con tilde - enie ) 		</p> 	</a>
+                        <a class="item">	Alt + 165 = Ñ 	<p>	(	 Letra EÑE mayúscula - letra N con tilde - ENIE ) 		</p> 	</a>
+                        <a class="item">	Alt + 166 = ª 	<p>	(	 Ordinal femenino, indicador de genero femenino ) 		</p> 	</a>
+                        <a class="item">	Alt + 167 = º 	<p>	(	 Ordinal masculino, indicador de genero masculino ) 		</p> 	</a>
+                        <a class="item">	Alt + 168 = ¿ 	<p>	(	 Abre signo interrogacion ) 		</p> 	</a>
+                        <a class="item">	Alt + 169 = ® 	<p>	(	 Símbolo de Marca Registrada ) 		</p> 	</a>
+                        <a class="item">	Alt + 170 = ¬ 	<p>	(	 Signo de negacion ) 		</p> 	</a>
+                        <a class="item">	Alt + 171 = ½ 	<p>	(	 Un medio, mitad, fracción ) 		</p> 	</a>
+                        <a class="item">	Alt + 172 = ¼ 	<p>	(	 Un cuarto, cuarta parte, fracción ) 		</p> 	</a>
+                        <a class="item">	Alt + 173 = ¡ 	<p>	(	 Abre signos de exclamacion, signo de admiracion ) 		</p> 	</a>
+                        <a class="item">	Alt + 174 = « 	<p>	(	 Abre comillas bajas, angulares, latinas o españolas ) 		</p> 	</a>
+                        <a class="item">	Alt + 175 = » 	<p>	(	 Cierra comillas bajas, angulares, latinas o españolas ) 		</p> 	</a>
+                        <a class="item">	Alt + 176 = ░ 	<p>	(	 Bloque color tramado densidad baja, carácter gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 177 = ▒ 	<p>	(	 Bloque color tramado densidad media, gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 178 = ▓ 	<p>	(	 Bloque color tramado densidad alta, carácter gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 179 = │ 	<p>	(	 Línea simple vertical de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 180 = ┤ 	<p>	(	 Línea vertical con empalme de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 181 = Á 	<p>	(	 Letra a mayúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 182 = Â 	<p>	(	 Letra A mayúscula con acento circunflejo ) 		</p> 	</a>
+                        <a class="item">	Alt + 183 = À 	<p>	(	 Letra A mayúscula con acento grave ) 		</p> 	</a>
+                        <a class="item">	Alt + 184 = © 	<p>	(	 Símbolo Copyright, bajo derecho de autor ) 		</p> 	</a>
+                        <a class="item">	Alt + 185 = ╣ 	<p>	(	 Doble línea vertical empalme izquierdo, gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 186 = ║ 	<p>	(	 Líneas doble vertical de recuadro gráfico, verticales ) 		</p> 	</a>
+                        <a class="item">	Alt + 187 = ╗ 	<p>	(	 Línea doble esquina superior derecha de recuadro ) 		</p> 	</a>
+                        <a class="item">	Alt + 188 = ╝ 	<p>	(	 Línea doble esquina inferior derecha de recuadro ) 		</p> 	</a>
+                        <a class="item">	Alt + 189 = ¢ 	<p>	(	 Signo centavo, céntimo o centésimo ) 		</p> 	</a>
+                        <a class="item">	Alt + 190 = ¥ 	<p>	(	 Signo monetario YEN japonés, YUAN chino ) 		</p> 	</a>
+                        <a class="item">	Alt + 191 = ┐ 	<p>	(	 Línea simple esquina de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 192 = └ 	<p>	(	 Línea simple esquina de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 193 = ┴ 	<p>	(	 Línea horizontal con empalme de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 194 = ┬ 	<p>	(	 Línea horizontal con empalme de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 195 = ├ 	<p>	(	 Línea vertical con empalme de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 196 = ─ 	<p>	(	 Línea simple horizontal de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 197 = ┼ 	<p>	(	 Líneas simples empalmes de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 198 = ã 	<p>	(	 Letra a minúscula con tilde ) 		</p> 	</a>
+                        <a class="item">	Alt + 199 = Ã 	<p>	(	 Letra A mayúscula con tilde ) 		</p> 	</a>
+                        <a class="item">	Alt + 200 = ╚ 	<p>	(	 Línea doble esquina inferior izquierda de recuadro ) 		</p> 	</a>
+                        <a class="item">	Alt + 201 = ╔ 	<p>	(	 Línea doble esquina superior izquierda de recuadro ) 		</p> 	</a>
+                        <a class="item">	Alt + 202 = ╩ 	<p>	(	 Doble línea horizontal empalme arriba, recuadro ) 		</p> 	</a>
+                        <a class="item">	Alt + 203 = ╦ 	<p>	(	 Doble línea horizontal empalme abajo, recuadro ) 		</p> 	</a>
+                        <a class="item">	Alt + 204 = ╠ 	<p>	(	 Doble línea vertical empalme derecho, recuadro ) 		</p> 	</a>
+                        <a class="item">	Alt + 205 = ═ 	<p>	(	 Líneas doble horizontales de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 206 = ╬ 	<p>	(	 Líneas dobles cruce de líneas de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 207 = ¤ 	<p>	(	 Signo monetario - divisa general ) 		</p> 	</a>
+                        <a class="item">	Alt + 208 = ð 	<p>	(	 Letra eth latina minúscula ) 		</p> 	</a>
+                        <a class="item">	Alt + 209 = Ð 	<p>	(	 Letra eth latina mayúscula ) 		</p> 	</a>
+                        <a class="item">	Alt + 210 = Ê 	<p>	(	 Letra E mayúscula con acento circunflejo ) 		</p> 	</a>
+                        <a class="item">	Alt + 211 = Ë 	<p>	(	 Letra E mayúscula con diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 212 = È 	<p>	(	 Letra E mayúscula con acento grave ) 		</p> 	</a>
+                        <a class="item">	Alt + 213 = ı 	<p>	(	 Letra minuscula i sin punto ) 		</p> 	</a>
+                        <a class="item">	Alt + 214 = Í 	<p>	(	 Letra i mayúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 215 = Î 	<p>	(	 Letra I mayúscula con acento circunflejo ) 		</p> 	</a>
+                        <a class="item">	Alt + 216 = Ï 	<p>	(	 Letra i mayúscula con diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 217 = ┘ 	<p>	(	 Línea simple esquina de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 218 = ┌ 	<p>	(	 Línea simple esquina de recuadro gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 219 = █ 	<p>	(	 Bloque color pleno solido, carácter gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 220 = ▄ 	<p>	(	 Medio bloque negro, mitad inferior, carácter gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 221 = ¦ 	<p>	(	 Barra vertical partida ) 		</p> 	</a>
+                        <a class="item">	Alt + 222 = Ì 	<p>	(	 Letra I mayúscula con acento grave ) 		</p> 	</a>
+                        <a class="item">	Alt + 223 = ▀ 	<p>	(	 Medio bloque negro, mitad superior, carácter gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 224 = Ó 	<p>	(	 Letra o mayúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 225 = ß 	<p>	(	 Letra alemana eszett o ese-zeta ) 		</p> 	</a>
+                        <a class="item">	Alt + 226 = Ô 	<p>	(	 Letra O mayúscula con acento circunflejo ) 		</p> 	</a>
+                        <a class="item">	Alt + 227 = Ò 	<p>	(	 Letra O mayúscula con acento grave ) 		</p> 	</a>
+                        <a class="item">	Alt + 228 = õ 	<p>	(	 Letra o minúscula con tilde ) 		</p> 	</a>
+                        <a class="item">	Alt + 229 = Õ 	<p>	(	 Letra O mayúscula con tilde ) 		</p> 	</a>
+                        <a class="item">	Alt + 230 = µ 	<p>	(	 Signo micro ) 		</p> 	</a>
+                        <a class="item">	Alt + 231 = þ 	<p>	(	 Letra latina thorn minúscula ) 		</p> 	</a>
+                        <a class="item">	Alt + 232 = Þ 	<p>	(	 Letra latina thorn mayúscula ) 		</p> 	</a>
+                        <a class="item">	Alt + 233 = Ú 	<p>	(	 Letra U mayúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 234 = Û 	<p>	(	 Letra U mayúscula con acento circunflejo ) 		</p> 	</a>
+                        <a class="item">	Alt + 235 = Ù 	<p>	(	 Letra U mayúscula con acento grave ) 		</p> 	</a>
+                        <a class="item">	Alt + 236 = ý 	<p>	(	 Letra y minúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 237 = Ý 	<p>	(	 Letra Y mayúscula con acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 238 = ¯ 	<p>	(	 Macron  marca larga), superguión, guión alto )		</p> 	</a>
+                        <a class="item">	Alt + 239 = ´ 	<p>	(	 Acento agudo ) 		</p> 	</a>
+                        <a class="item">	Alt + 240 = ≡ 	<p>	(	 Símbolo matemático de congruencia, equivalencia ) 		</p> 	</a>
+                        <a class="item">	Alt + 241 = ± 	<p>	(	 Signo mas menos ) 		</p> 	</a>
+                        <a class="item">	Alt + 242 = ‗ 	<p>	(	 ASCII 242 ) 		</p> 	</a>
+                        <a class="item">	Alt + 243 = ¾ 	<p>	(	 Tres cuartos, fracción ) 		</p> 	</a>
+                        <a class="item">	Alt + 244 = ¶ 	<p>	(	 Fin de párrafo - signo de calderón ) 		</p> 	</a>
+                        <a class="item">	Alt + 245 = § 	<p>	(	 Signo de sección ) 		</p> 	</a>
+                        <a class="item">	Alt + 246 = ÷ 	<p>	(	 Signo de división ) 		</p> 	</a>
+                        <a class="item">	Alt + 247 = ¸ 	<p>	(	 Cedilla , virgulilla baja ) 		</p> 	</a>
+                        <a class="item">	Alt + 248 = ° 	<p>	(	 Signo de grado, anillo ) 		</p> 	</a>
+                        <a class="item">	Alt + 249 = ¨ 	<p>	(	 Diéresis ) 		</p> 	</a>
+                        <a class="item">	Alt + 250 = · 	<p>	(	 Punto centrado, punto medio, coma georgiana ) 		</p> 	</a>
+                        <a class="item">	Alt + 251 = ¹ 	<p>	(	 Superíndice uno ) 		</p> 	</a>
+                        <a class="item">	Alt + 252 = ³ 	<p>	(	 Superíndice tres , potencia tres , al cubo ) 		</p> 	</a>
+                        <a class="item">	Alt + 253 = ² 	<p>	(	 Superíndice dos , al cuadrado ) 		</p> 	</a>
+                        <a class="item">	Alt + 254 = ■ 	<p>	(	 Cuadrado negro, caracter gráfico ) 		</p> 	</a>
+                        <a class="item">	Alt + 255 = nbsp 	<p>	(	 Espacio sin separación - non breaking space ) 		</p> 	</a>
+
+                      </div>
+
+                    </div>
+
+                    <span class="uib_shim"></span>
+                  </div>
+                </div>
+                <span class="uib_shim"></span>
+              </div>
+
+              <span class="uib_shim"></span>
+            </div>
+          </div>
+          <span class="uib_shim"></span>
+        </div>
+      </div>
+
+      <div id="acercade" class="upage-content hidden wrapping-col left">
+        <div class="widget uib_w_18 scale-image d-margins" data-uib="media/img" data-ver="0">
+          <figure class="figure-align">
+            <img src="topcoat/img/spinner.png">
+            <figcaption data-position="bottom"></figcaption>
+          </figure>
+        </div>
+      </div>
+  
+
+      <ion-footer-bar>
+       
+          <div class="tabs tabs-icon-only">
+  <a class="tab-item bhome">
+    <i class="icon ion-home"></i>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-star"></i>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+  </a>
+</div>
+
+          
+        </a>
+      </ion-footer-bar>
+
+     
+
+     
+    </div>
+
+  </body>
+
+</html>
