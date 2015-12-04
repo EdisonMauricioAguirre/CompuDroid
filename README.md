@@ -1,4 +1,4 @@
-Blank HTML App Designer Template for Building Packaged Mobile Web Apps
+Diseño de App Android Basado en Ionic Framework
 ======================================================================
 
 Copyright © 2012-2015, Intel Corporation. All rights reserved.
